@@ -70,6 +70,7 @@ class ModelExtractor:
         self.api_key = api_key
         self.litellm = LiteLLMDataFetcher()
         self.stats = {"total": 0, "processed": 0, "skipped": 0, "failed": 0, "pricing_found": 0}
+        self._current_pricing = None
 
     def get_all_models(self) -> list:
         print(f"Fetching models from {DISPLAY_NAME} API...")
@@ -105,7 +106,14 @@ class ModelExtractor:
             ("Python code example", "../../docs/code-example.py.j2", "python"),
             ("JavaScript code example", "../../docs/code-example.js.j2", "javascript"),
             ("cURL code example", "../../docs/code-example.sh.j2", "bash"),
+            ("Python function calling code example", "../../docs/code-example-fc.py.j2", "python"),
         ]
+
+    def format_price(self, price: float) -> str:
+        """Format price without trailing .0 for whole numbers."""
+        if price == int(price):
+            return str(int(price))
+        return str(price)
 
     def build_offering(self, model_id: str, model_info: dict) -> OfferingDataBuilder:
         service_type = self.determine_service_type(model_id)
@@ -132,14 +140,19 @@ class ModelExtractor:
             if "input_cost_per_token" in litellm_details and "output_cost_per_token" in litellm_details:
                 input_price = float(litellm_details["input_cost_per_token"]) * 1_000_000
                 output_price = float(litellm_details["output_cost_per_token"]) * 1_000_000
-                builder.set_payout_price({
+                self._current_pricing = {
                     "type": "one_million_tokens",
-                    "input": str(input_price),
-                    "output": str(output_price),
+                    "input": self.format_price(input_price),
+                    "output": self.format_price(output_price),
                     "description": "Pricing Per 1M Tokens Input/Output",
                     "reference": None,
-                })
+                }
+                builder.set_payout_price(self._current_pricing)
                 self.stats["pricing_found"] += 1
+            else:
+                self._current_pricing = None
+        else:
+            self._current_pricing = None
 
         if "owned_by" in model_info:
             builder.add_detail("owned_by", model_info["owned_by"])
@@ -150,7 +163,7 @@ class ModelExtractor:
         return builder
 
     def build_listing(self, model_id: str) -> ListingDataBuilder:
-        placeholder = "x" * min(len(self.api_key), 40) if self.api_key else "x" * 40
+        placeholder = "x" * len(self.api_key) if self.api_key else "x" * 40
 
         builder = (
             ListingDataBuilder()
@@ -179,7 +192,7 @@ class ModelExtractor:
             }
         })
         builder.set_raw("service_options", {"default_parameters": {"apikey": self.api_key}})
-        builder.set_raw("list_price", None)
+        builder.set_raw("list_price", self._current_pricing)
         return builder
 
     def process_model(self, model, output_dir: Path, force: bool) -> bool:
