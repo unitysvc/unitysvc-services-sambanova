@@ -1,0 +1,55 @@
+{
+  "currency": "USD",
+  "description": "Qwen3-32B is a dense 32.8B parameter causal language model from the Qwen3 series, optimized for both complex reasoning and efficient dialogue. It supports seamless switching between a \"thinking\" mode for tasks like math, coding, and logical inference, and a \"non-thinking\" mode for faster, general-purpose conversation. The model demonstrates strong performance in instruction-following, agent tool use, creative writing, and multilingual tasks across 100+ languages and dialects. It natively handles 32K token contexts and can extend to 131K tokens using YaRN-based scaling. ",
+  "details": {
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "instruct_type": "qwen3",
+      "modality": "text->text",
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen3"
+    },
+    "contextLength": 40960,
+    "context_length": 40960,
+    "litellm_provider": "deepinfra",
+    "max_input_tokens": 40960,
+    "max_output_tokens": 40960,
+    "max_tokens": 40960,
+    "mode": "chat",
+    "object": "model",
+    "owned_by": "no-reply@sambanova.ai",
+    "per_request_limits": null,
+    "top_provider": {
+      "context_length": 40960,
+      "is_moderated": false,
+      "max_completion_tokens": 40960
+    }
+  },
+  "display_name": "Qwen: Qwen3 32B",
+  "name": "Qwen3-32B",
+  "payout_price": {
+    "description": "Pricing Per 1M Tokens Input/Output",
+    "input": "0.09999999999999999",
+    "output": "0.28",
+    "reference": null,
+    "type": "one_million_tokens"
+  },
+  "schema": "offering_v1",
+  "service_type": "llm",
+  "status": "ready",
+  "tags": [
+    "byop"
+  ],
+  "time_created": "2025-11-05T03:42:14.176Z",
+  "upstream_access_interfaces": {
+    "Sambanova API": {
+      "access_method": "http",
+      "base_url": "https://api.sambanova.ai/v1",
+      "rate_limits": []
+    }
+  }
+}

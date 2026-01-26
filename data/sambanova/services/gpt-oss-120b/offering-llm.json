@@ -1,0 +1,55 @@
+{
+  "currency": "USD",
+  "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized to run on a single H100 GPU with native MXFP4 quantization. The model supports configurable reasoning depth, full chain-of-thought access, and native tool use, including function calling, browsing, and structured output generation.",
+  "details": {
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "instruct_type": null,
+      "modality": "text->text",
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT"
+    },
+    "contextLength": 131072,
+    "context_length": 131072,
+    "litellm_provider": "cerebras",
+    "max_input_tokens": 131072,
+    "max_output_tokens": 32768,
+    "max_tokens": 32768,
+    "mode": "chat",
+    "object": "model",
+    "owned_by": "no-reply@sambanova.ai",
+    "per_request_limits": null,
+    "top_provider": {
+      "context_length": 131072,
+      "is_moderated": false,
+      "max_completion_tokens": 131072
+    }
+  },
+  "display_name": "OpenAI: gpt-oss-120b",
+  "name": "gpt-oss-120b",
+  "payout_price": {
+    "description": "Pricing Per 1M Tokens Input/Output",
+    "input": "0.25",
+    "output": "0.69",
+    "reference": null,
+    "type": "one_million_tokens"
+  },
+  "schema": "offering_v1",
+  "service_type": "llm",
+  "status": "ready",
+  "tags": [
+    "byop"
+  ],
+  "time_created": "2025-11-05T03:42:15.134Z",
+  "upstream_access_interfaces": {
+    "Sambanova API": {
+      "access_method": "http",
+      "base_url": "https://api.sambanova.ai/v1",
+      "rate_limits": []
+    }
+  }
+}

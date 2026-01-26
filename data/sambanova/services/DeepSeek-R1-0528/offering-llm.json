@@ -1,0 +1,55 @@
+{
+  "currency": "USD",
+  "description": "DeepSeek-R1-0528 is a lightly upgraded release of DeepSeek R1 that taps more compute and smarter post-training tricks, pushing its reasoning and inference to the brink of flagship models like O3 and Gemini 2.5 Pro.\nIt now tops math, programming, and logic leaderboards, showcasing a step-change in depth-of-thought.\nThe distilled variant, DeepSeek-R1-0528-Qwen3-8B, transfers this chain-of-thought into an 8 B-parameter form, beating standard Qwen3 8B by +10 pp and tying the 235 B \u201cthinking\u201d giant on AIME 2024.",
+  "details": {
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "instruct_type": "deepseek-r1",
+      "modality": "text->text",
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen"
+    },
+    "contextLength": 131072,
+    "context_length": 131072,
+    "litellm_provider": "deepinfra",
+    "max_input_tokens": 163840,
+    "max_output_tokens": 163840,
+    "max_tokens": 163840,
+    "mode": "chat",
+    "object": "model",
+    "owned_by": "no-reply@sambanova.ai",
+    "per_request_limits": null,
+    "top_provider": {
+      "context_length": 131072,
+      "is_moderated": false,
+      "max_completion_tokens": null
+    }
+  },
+  "display_name": "DeepSeek: DeepSeek R1 0528 Qwen3 8B (free)",
+  "name": "DeepSeek-R1-0528",
+  "payout_price": {
+    "description": "Pricing Per 1M Tokens Input/Output",
+    "input": "0.5",
+    "output": "2.1500000000000004",
+    "reference": null,
+    "type": "one_million_tokens"
+  },
+  "schema": "offering_v1",
+  "service_type": "llm",
+  "status": "ready",
+  "tags": [
+    "byop"
+  ],
+  "time_created": "2025-11-05T03:42:09.520Z",
+  "upstream_access_interfaces": {
+    "Sambanova API": {
+      "access_method": "http",
+      "base_url": "https://api.sambanova.ai/v1",
+      "rate_limits": []
+    }
+  }
+}

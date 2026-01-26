@@ -1,0 +1,37 @@
+{
+  "currency": "USD",
+  "description": "Meta Llama 3.3 70B Instruct language model",
+  "details": {
+    "contextLength": 131072,
+    "litellm_provider": "sambanova",
+    "max_input_tokens": 131072,
+    "max_output_tokens": 131072,
+    "max_tokens": 131072,
+    "mode": "chat",
+    "object": "model",
+    "owned_by": "no-reply@sambanova.ai"
+  },
+  "display_name": "Meta Llama 3.3 70B Instruct",
+  "name": "Meta-Llama-3.3-70B-Instruct",
+  "payout_price": {
+    "description": "Pricing Per 1M Tokens Input/Output",
+    "input": "0.6",
+    "output": "1.2",
+    "reference": null,
+    "type": "one_million_tokens"
+  },
+  "schema": "offering_v1",
+  "service_type": "llm",
+  "status": "ready",
+  "tags": [
+    "byop"
+  ],
+  "time_created": "2025-11-05T03:42:13.688Z",
+  "upstream_access_interfaces": {
+    "Sambanova API": {
+      "access_method": "http",
+      "base_url": "https://api.sambanova.ai/v1",
+      "rate_limits": []
+    }
+  }
+}

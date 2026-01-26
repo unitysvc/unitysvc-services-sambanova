@@ -1,0 +1,24 @@
+{
+  "description": "Whisper Large V3 language model",
+  "details": {
+    "object": "model",
+    "owned_by": "no-reply@sambanova.ai"
+  },
+  "display_name": "Whisper Large V3",
+  "name": "Whisper-Large-v3",
+  "payout_price": null,
+  "schema": "offering_v1",
+  "service_type": "prerecorded_transcription",
+  "status": "ready",
+  "tags": [
+    "byop"
+  ],
+  "time_created": "2025-11-05T03:42:14.657Z",
+  "upstream_access_interfaces": {
+    "Sambanova API": {
+      "access_method": "http",
+      "base_url": "https://api.sambanova.ai/v1",
+      "rate_limits": []
+    }
+  }
+}

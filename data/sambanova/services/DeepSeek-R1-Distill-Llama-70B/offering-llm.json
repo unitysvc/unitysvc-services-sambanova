@@ -1,0 +1,55 @@
+{
+  "currency": "USD",
+  "description": "DeepSeek R1 Distill Llama 70B is a distilled large language model based on [Llama-3.3-70B-Instruct](/meta-llama/llama-3.3-70b-instruct), using outputs from [DeepSeek R1](/deepseek/deepseek-r1). The model combines advanced distillation techniques to achieve high performance across multiple benchmarks, including:\n\n- AIME 2024 pass@1: 70.0\n- MATH-500 pass@1: 94.5\n- CodeForces Rating: 1633\n\nThe model leverages fine-tuning from DeepSeek R1's outputs, enabling competitive performance comparable to larger frontier models.",
+  "details": {
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "instruct_type": "deepseek-r1",
+      "modality": "text->text",
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Llama3"
+    },
+    "contextLength": 8192,
+    "context_length": 8192,
+    "litellm_provider": "deepinfra",
+    "max_input_tokens": 131072,
+    "max_output_tokens": 131072,
+    "max_tokens": 131072,
+    "mode": "chat",
+    "object": "model",
+    "owned_by": "no-reply@sambanova.ai",
+    "per_request_limits": null,
+    "top_provider": {
+      "context_length": 8192,
+      "is_moderated": false,
+      "max_completion_tokens": 4096
+    }
+  },
+  "display_name": "DeepSeek: R1 Distill Llama 70B (free)",
+  "name": "DeepSeek-R1-Distill-Llama-70B",
+  "payout_price": {
+    "description": "Pricing Per 1M Tokens Input/Output",
+    "input": "0.19999999999999998",
+    "output": "0.6",
+    "reference": null,
+    "type": "one_million_tokens"
+  },
+  "schema": "offering_v1",
+  "service_type": "llm",
+  "status": "ready",
+  "tags": [
+    "byop"
+  ],
+  "time_created": "2025-11-05T03:42:10.035Z",
+  "upstream_access_interfaces": {
+    "Sambanova API": {
+      "access_method": "http",
+      "base_url": "https://api.sambanova.ai/v1",
+      "rate_limits": []
+    }
+  }
+}
