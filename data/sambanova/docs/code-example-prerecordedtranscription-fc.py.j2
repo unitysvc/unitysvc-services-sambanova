@@ -1,0 +1,22 @@
+import os
+import requests
+
+API_KEY = os.getenv("API_KEY")
+
+def transcribe_file(path: str):
+    url = "https://api.sambanova.ai/v1/audio/transcriptions"
+    headers = {"Authorization": f"Bearer {API_KEY}"}
+
+    files = {
+        "file": (path, open(path, "rb")),
+        "model": (None, "{{offering.name}}")
+    }
+
+    r = requests.post(url, headers=headers, files=files)
+    try:
+        return r.json()
+    except:
+        return {"error": r.text}
+
+# Example usage
+print(transcribe_file("obamacompressed.mp4"))

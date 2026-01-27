@@ -1,0 +1,25 @@
+{
+  "currency": "USD",
+  "description": "Llama 3.3 Swallow 70B Instruct V0.4 language model",
+  "details": {
+    "object": "model",
+    "owned_by": "no-reply@sambanova.ai"
+  },
+  "display_name": "Llama 3.3 Swallow 70B Instruct V0.4",
+  "name": "Llama-3.3-Swallow-70B-Instruct-v0.4",
+  "schema": "offering_v1",
+  "service_type": "llm",
+  "status": "ready",
+  "tags": [
+    "byop"
+  ],
+  "time_created": "2026-01-26T02:54:03.693Z",
+  "upstream_access_interfaces": {
+    "SambaNova Systems API": {
+      "access_method": "http",
+      "api_key": "${ secrets.SAMBANOVA_API_KEY }",
+      "base_url": "https://api.sambanova.ai/v1",
+      "rate_limits": []
+    }
+  }
+}

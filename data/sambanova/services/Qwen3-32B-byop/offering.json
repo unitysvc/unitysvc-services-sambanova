@@ -1,0 +1,38 @@
+{
+  "currency": "USD",
+  "description": "Qwen3 32B language model",
+  "details": {
+    "contextLength": 8192,
+    "litellm_provider": "sambanova",
+    "max_input_tokens": 8192,
+    "max_output_tokens": 8192,
+    "max_tokens": 8192,
+    "mode": "chat",
+    "object": "model",
+    "owned_by": "no-reply@sambanova.ai"
+  },
+  "display_name": "Qwen3 32B",
+  "name": "Qwen3-32B",
+  "payout_price": {
+    "description": "Pricing Per 1M Tokens Input/Output",
+    "input": "0.39999999999999997",
+    "output": "0.7999999999999999",
+    "reference": null,
+    "type": "one_million_tokens"
+  },
+  "schema": "offering_v1",
+  "service_type": "llm",
+  "status": "ready",
+  "tags": [
+    "byop"
+  ],
+  "time_created": "2026-01-26T02:54:03.701Z",
+  "upstream_access_interfaces": {
+    "SambaNova Systems API": {
+      "access_method": "http",
+      "api_key": "${ secrets.SAMBANOVA_API_KEY }",
+      "base_url": "https://api.sambanova.ai/v1",
+      "rate_limits": []
+    }
+  }
+}
