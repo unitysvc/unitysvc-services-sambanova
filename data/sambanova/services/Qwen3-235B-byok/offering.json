@@ -1,0 +1,39 @@
+{
+  "currency": "USD",
+  "description": "Qwen3 235B language model",
+  "details": {
+    "contextLength": 40960,
+    "litellm_provider": "deepinfra",
+    "max_input_tokens": 40960,
+    "max_output_tokens": 40960,
+    "max_tokens": 40960,
+    "mode": "chat",
+    "object": "model",
+    "owned_by": "no-reply@sambanova.ai"
+  },
+  "display_name": "Qwen3 235B",
+  "name": "Qwen3-235B",
+  "payout_price": {
+    "description": "Pricing Per 1M Tokens Input/Output",
+    "input": "0.18",
+    "output": "0.54",
+    "reference": null,
+    "type": "one_million_tokens"
+  },
+  "schema": "offering_v1",
+  "service_type": "llm",
+  "status": "ready",
+  "tags": [
+    "ai",
+    "gateway",
+    "byok"
+  ],
+  "time_created": "2026-02-22T05:34:04.452746Z",
+  "upstream_access_interfaces": {
+    "SambaNova API": {
+      "access_method": "http",
+      "base_url": "https://api.sambanova.ai/v1",
+      "rate_limits": []
+    }
+  }
+}

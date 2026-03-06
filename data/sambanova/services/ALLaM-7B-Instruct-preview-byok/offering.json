@@ -1,0 +1,26 @@
+{
+  "currency": "USD",
+  "description": "Allam 7B Instruct Preview language model",
+  "details": {
+    "object": "model",
+    "owned_by": "no-reply@sambanova.ai"
+  },
+  "display_name": "Allam 7B Instruct Preview",
+  "name": "ALLaM-7B-Instruct-preview",
+  "schema": "offering_v1",
+  "service_type": "llm",
+  "status": "ready",
+  "tags": [
+    "ai",
+    "gateway",
+    "byok"
+  ],
+  "time_created": "2026-02-22T05:34:04.407561Z",
+  "upstream_access_interfaces": {
+    "SambaNova API": {
+      "access_method": "http",
+      "base_url": "https://api.sambanova.ai/v1",
+      "rate_limits": []
+    }
+  }
+}
