@@ -1,4 +1,7 @@
 {
+  "capabilities": [
+    "llm"
+  ],
   "currency": "USD",
   "description": "Qwen3 235B language model",
   "details": {
@@ -14,10 +17,9 @@
   "display_name": "Qwen3 235B",
   "name": "Qwen3-235B",
   "payout_price": {
-    "description": "Pricing Per 1M Tokens Input/Output",
-    "input": "0.18",
-    "output": "0.54",
-    "reference": null,
+    "description": "Service provider charges $0.18 / $0.54 per 1M input/output tokens",
+    "input": "0",
+    "output": "0",
     "type": "one_million_tokens"
   },
   "schema": "offering_v1",
@@ -32,9 +34,12 @@
   "upstream_access_interfaces": {
     "SambaNova API": {
       "access_method": "http",
-      "base_url": "https://api.sambanova.ai/v1",
       "api_key": "${ customer_secrets.SAMBANOVA_API_KEY }",
-      "rate_limits": []
+      "base_url": "https://api.sambanova.ai/v1",
+      "rate_limits": [],
+      "routing_key": {
+        "model": "Qwen3-235B"
+      }
     }
   }
 }
