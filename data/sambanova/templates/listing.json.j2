@@ -23,7 +23,7 @@
     "Python code example": {
       "category": "code_example",
       "description": "Example code to use the model",
-      "file_path": "../../docs/code-example.py.j2",
+      "file_path": "../../docs/{% if 'e5' in offering_name.lower() %}code-example-embed.py.j2{% elif 'whisper' in offering_name.lower() %}code-example-prerecordedtranscription.py.j2{% else %}code-example.py.j2{% endif %}",
       "is_active": true,
       "is_public": true,
       "mime_type": "python"
@@ -31,7 +31,7 @@
     "Python function calling code example": {
       "category": "code_example",
       "description": "Example code to use the model",
-      "file_path": "../../docs/code-example-fc.py.j2",
+      "file_path": "../../docs/{% if 'e5' in offering_name.lower() %}code-example-embed-fc.py.j2{% elif 'whisper' in offering_name.lower() %}code-example-prerecordedtranscription-fc.py.j2{% else %}code-example-fc.py.j2{% endif %}",
       "is_active": true,
       "is_public": true,
       "mime_type": "python"
@@ -39,7 +39,7 @@
     "JavaScript code example": {
       "category": "code_example",
       "description": "Example code to use the model",
-      "file_path": "../../docs/code-example.js.j2",
+      "file_path": "../../docs/{% if 'e5' in offering_name.lower() %}code-example-embed.js.j2{% elif 'whisper' in offering_name.lower() %}code-example-prerecordedtranscription.js.j2{% else %}code-example.js.j2{% endif %}",
       "is_active": true,
       "is_public": true,
       "mime_type": "javascript"
@@ -47,7 +47,7 @@
     "cURL code example": {
       "category": "code_example",
       "description": "Example code to use the model",
-      "file_path": "../../docs/code-example.sh.j2",
+      "file_path": "../../docs/{% if 'e5' in offering_name.lower() %}code-example-embed.sh.j2{% elif 'whisper' in offering_name.lower() %}code-example-prerecordedtranscription.sh.j2{% else %}code-example.sh.j2{% endif %}",
       "is_active": true,
       "is_public": true,
       "mime_type": "bash"
