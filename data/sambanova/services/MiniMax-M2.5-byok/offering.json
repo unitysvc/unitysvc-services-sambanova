@@ -5,10 +5,7 @@
   "currency": "USD",
   "description": "Minimax M2.5 language model",
   "details": {
-    "contextLength": 1000000,
-    "litellm_provider": "minimax",
-    "max_input_tokens": 1000000,
-    "max_output_tokens": 8192,
+    "litellm_provider": "baseten",
     "mode": "chat",
     "object": "model",
     "owned_by": "no-reply@sambanova.ai"
@@ -16,8 +13,7 @@
   "display_name": "Minimax M2.5",
   "name": "MiniMax-M2.5",
   "payout_price": {
-    "cached_input": "0",
-    "description": "Service provider charges $0.3 / $1.2 / $0.03 per 1M input/output/cached tokens",
+    "description": "Service provider charges $0.3 / $1.2 per 1M input/output tokens",
     "input": "0",
     "output": "0",
     "type": "one_million_tokens"
@@ -32,7 +28,7 @@
   ],
   "time_created": "2026-03-21T22:48:12.464390Z",
   "upstream_access_config": {
-    "sambanova_api": {
+    "SambaNova API": {
       "access_method": "http",
       "api_key": "${ customer_secrets.SAMBANOVA_API_KEY }",
       "base_url": "https://api.sambanova.ai/v1",

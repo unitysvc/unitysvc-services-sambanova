@@ -58,8 +58,7 @@
     }
   },
   "list_price": {
-    "cached_input": "0",
-    "description": "Service provider charges $0.3 / $1.2 / $0.03 per 1M input/output/cached tokens",
+    "description": "Service provider charges $0.3 / $1.2 per 1M input/output tokens",
     "input": "0",
     "output": "0",
     "type": "one_million_tokens"
