@@ -5,14 +5,14 @@
   "currency": "USD",
   "description": "Minimax M2.5 language model",
   "details": {
+    "context_length": 196608,
     "litellm_provider": "baseten",
-    "mode": "chat",
-    "object": "model",
-    "owned_by": "no-reply@sambanova.ai",
     "metadata_sources": {
       "context_length": "openrouter"
     },
-    "context_length": 196608,
+    "mode": "chat",
+    "object": "model",
+    "owned_by": "no-reply@sambanova.ai",
     "parameter_count": null
   },
   "display_name": "Minimax M2.5",
